@@ -1,22 +1,18 @@
-/* body{
-	font-size: 18px;
-	font-family: Lucida Console;
-	margin-left: 15%;
-	margin-right: 15%;
-} */
-
 h1 {
     text-align: center;
 }
 
-a {
-	target: _blank;
+.data{
+	display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 td{
 	text-align: center;
 	width: 1%;
-	overflow: hidden;
+	/* overflow: hidden; */
 	text-overflow: ellipsis;
 }
 

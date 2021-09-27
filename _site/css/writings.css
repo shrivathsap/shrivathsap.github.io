@@ -15,8 +15,8 @@ a {
 
 td{
 	text-align: center;
-	width: 1%;
-	overflow: hidden;
+	width: 0.5%;
+	/* overflow: hidden; */
 	text-overflow: ellipsis;
 }
 
