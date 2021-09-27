@@ -1,26 +1,22 @@
-/* body{
-	font-size: 18px;
-	font-family: Lucida Console;
-	margin-left: 15%;
-	margin-right: 15%;
-} */
-
 h1 {
     text-align: center;
 }
 
-a {
-	target: _blank;
+.data{
+	display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 td{
 	text-align: center;
-	width: 0.5%;
-	/* overflow: hidden; */
-	text-overflow: ellipsis;
+	width: 1%;
 }
 
 table{
+	table-layout: fixed;
     margin: auto;
 	empty-cells: show;
 }
@@ -30,7 +26,7 @@ table{
   margin-right: auto;
 }
 
-.dropdown{
+.tablehead{
 	/* font-style: italic; */
 	text-align: center;
 	color: #1a001a;
@@ -39,16 +35,7 @@ table{
 	font-kerning: normal;
 }
 
-
-/* .dropdown:hover{
-	background-color: #fcfcfc;
-	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
-	font-size: 36px;
-	transition-property: font-size;
-  	transition-duration: 0.5s;
-} */
-
-.droptable {
+.tablecontent {
 	/* display: none; */
 	text-align: center;
 	background-color: #fcfcfc;
@@ -58,16 +45,7 @@ table{
 	transition-duration: 1s;
 }
 
-/* .droptable td {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-} */
-
-.droptable td:hover {
+.tablecontent td:hover {
   background-color: #fafafa;
   font-size: 17px;
   transition-property: font-size;
