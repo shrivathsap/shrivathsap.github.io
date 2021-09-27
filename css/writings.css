@@ -7,16 +7,16 @@ h1 {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 td{
 	text-align: center;
 	width: 1%;
-	/* overflow: hidden; */
-	text-overflow: ellipsis;
 }
 
 table{
+	table-layout: fixed;
     margin: auto;
 	empty-cells: show;
 }
@@ -35,15 +35,6 @@ table{
 	font-kerning: normal;
 }
 
-
-/* .dropdown:hover{
-	background-color: #fcfcfc;
-	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
-	font-size: 36px;
-	transition-property: font-size;
-  	transition-duration: 0.5s;
-} */
-
 .droptable {
 	/* display: none; */
 	text-align: center;
@@ -53,15 +44,6 @@ table{
 	transition-property: opacity;
 	transition-duration: 1s;
 }
-
-/* .droptable td {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-} */
 
 .droptable td:hover {
   background-color: #fafafa;
