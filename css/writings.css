@@ -26,7 +26,7 @@ table{
   margin-right: auto;
 }
 
-.dropdown{
+.tablehead{
 	/* font-style: italic; */
 	text-align: center;
 	color: #1a001a;
@@ -35,7 +35,7 @@ table{
 	font-kerning: normal;
 }
 
-.droptable {
+.tablecontent {
 	/* display: none; */
 	text-align: center;
 	background-color: #fcfcfc;
@@ -45,7 +45,7 @@ table{
 	transition-duration: 1s;
 }
 
-.droptable td:hover {
+.tablecontent td:hover {
   background-color: #fafafa;
   font-size: 17px;
   transition-property: font-size;

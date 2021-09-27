@@ -10,7 +10,6 @@ title: Writings
 		<script type="text/javascript" id="MathJax-script" async
   			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
 		</script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<title>Writings</title>
 	</head>
 	<body>
@@ -28,10 +27,10 @@ title: Writings
 
 		<br>
 
-		<div class="dropdown" id="analysis">
+		<div class="tablehead">
 			Analysis
 		</div>
-		<div  class = "droptable" id = "analysis_table">
+		<div  class = "tablecontent">
 			<table>
 				<tr>
 					<td><div class = "data" title = "Baire Category Theorem">
@@ -63,10 +62,10 @@ title: Writings
 			</table>
 		</div>
 
-		<div class="dropdown" id="algebra">
+		<div class="tablehead">
 			Algebra
 		</div>
-		<div  class = "droptable" id = "algebra_table">
+		<div  class = "tablecontent">
 			<table>
 				<tr>
 					<td><div class = "data" title = "Canonical forms">
@@ -82,10 +81,10 @@ title: Writings
 			</table>
 		</div>
 
-		<div class="dropdown" id="topology">
+		<div class="tablehead">
 			Topology and geometry
 		</div>
-		<div  class = "droptable" id = "topology_table">
+		<div  class = "tablecontent">
 			<table>
 				<tr>
 					<td><div class = "data" title = "Notes on the concept of derivative">
@@ -98,10 +97,10 @@ title: Writings
 			</table>
 		</div>
 
-		<div class="dropdown" id="others">
+		<div class="tablehead">
 			Others
 		</div>
-		<div  class = "droptable" id = "others_table">
+		<div  class = "tablecontent">
 			<table>
 				<tr>
 					<td><div class = "data" title = "Notes on ODEs">
@@ -119,27 +118,5 @@ title: Writings
 
 		<p>When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0 \hookrightarrow \) and they are
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</p>
-
-	<script type="text/javascript">
-		function table_handler(table_id){
-			var list_of_tables = document.getElementsByClassName("droptable");
-			for(i=0; i<list_of_tables.length; i++){
-				if (list_of_tables[i].id == table_id){
-					if ($(list_of_tables[i]).css("visibility")=="visible"){
-						$(list_of_tables[i]).css("visibility", "hidden");
-						$(list_of_tables[i]).css("opacity", "0");
-					}
-					else{
-						$(list_of_tables[i]).css("visibility", "visible");
-						$(list_of_tables[i]).css("opacity", "1");
-					}
-				}
-				else{
-					$(list_of_tables[i]).css("visibility", "hidden");
-					$(list_of_tables[i]).css("opacity", "0");
-				}
-			}
-		}
-	</script>
 	</body>
 </html>
