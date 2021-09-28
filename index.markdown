@@ -4,4 +4,4 @@
 
 layout: home
 ---
-<title> a yellow mellow swallow </title>
+<title>{{site.title}}</title>
