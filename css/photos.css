@@ -7,7 +7,7 @@
 	grid-template-columns: repeat(4, 1fr);
 	grid-row-gap: 20px;
 	grid-column-gap: 10px;
-	background-color: PINK;
+	/* background-color: PINK; */
 	justify-content: center;
 	align-content: center;
 	/* height: 100vh; */

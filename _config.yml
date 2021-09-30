@@ -29,6 +29,8 @@ github_username:  svok33
 
 #default stuff minima theme uses, author appears in footer and feed
 author: Shrivathsa Pandelu
+show_excerpts: true
+excerpt_separator: <!--more-->
 
 #change format of blog urls
 permalink: /blog/:title
