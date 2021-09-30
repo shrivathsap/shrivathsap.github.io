@@ -30,6 +30,9 @@ github_username:  svok33
 #default stuff minima theme uses, author appears in footer and feed
 author: Shrivathsa Pandelu
 
+#change format of blog urls
+permalink: /blog/:title
+
 #things not default for minima
 copyright: "ShrivathsaPandelu"
 
