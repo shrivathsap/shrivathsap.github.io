@@ -6,7 +6,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
-		<script>
+		<!-- <script>
 			//removing the home base url because post.url gives relative path
 			s = location.href
 			t = '/random.html'
@@ -24,6 +24,13 @@
 				if(list_of_posts[i] != comingFromPost) new_list.push(list_of_posts[i]);
 			}
 			new_url = new_list[Math.floor(Math.random()*new_list.length)];
+			location.replace(new_url)
+		</script> -->
+		<script>
+			var list_of_posts = [{%- for post in site.posts -%}
+				"{{ post.url }}",
+			{%- endfor -%}]
+			new_url = list_of_posts[Math.floor(Math.random()*list_of_posts.length)];
 			location.replace(new_url)
 		</script>
 	</head>
