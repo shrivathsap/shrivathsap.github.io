@@ -1,4 +1,4 @@
----
+</code>---
 layout: post
 title:  "Making this site"
 categories: tech
@@ -21,20 +21,20 @@ categories: tech
 		</p>
 		<p>
 			The <a href="/writings.html">Writings</a> page was a little harder. It took a while to get the table layout right.
-			And then I needed to figure out a way to truncate the text, so that when viewing on mobile devices, the webpage still looks neat (otherwise the table would overflow, while the footer got cut-off abruptly). Eventually I figured out that what was needed was to mainly set `table-layout` property to be fixed and use this tool called `webkit` to handle the truncation of titles and adding ellipsis.
+			And then I needed to figure out a way to truncate the text, so that when viewing on mobile devices, the webpage still looks neat (otherwise the table would overflow, while the footer got cut-off abruptly). Eventually I figured out that what was needed was to mainly set <code>table-layout</code> property to be fixed and use this tool called <pre>webkit</code> to handle the truncation of titles and adding ellipsis.
 		</p>
 		<p>
 			The hardest page was the <a href="photos.html">Some photos</a> page. It is easy to get the table layout and so on, but the hard part was in getting the lightbox. I learnt how to do that from <a href="https://www.youtube.com/watch?v=uKVVSwXdLr0">this video</a>. But that video addresses only the part that takes care of getting a lightbox(this is the box that contains the image when you click on it). I then added the arrows to handle navigation, and this part was quite easy. Using some basic JavaScript I added the functionality to navigate through images using the arrow keys (for devices with keyboards). As of now, I do not know how to handle image swiping on touchscreen devices.
 		</p>
 		<p>
 			Next comes the theme. So, Jekyll ships with a default theme called Minima. I took this theme, modified how the footer looked. And later, I also modified the layout used for posts to include links for the previous post, next post and one link to open a random post.
-			Jekyll uses the <a href="https://shopify.github.io/liquid/">Liquid template</a> to handle some processing (that's the only word that seems to fit here). Setting up links to the previous and next post was as easy as calling `post.previous, post.next`. The random button was harder.
+			Jekyll uses the <a href="https://shopify.github.io/liquid/">Liquid template</a> to handle some processing (that's the only word that seems to fit here). Setting up links to the previous and next post was as easy as calling <pre>post.previous, post.next</code>. The random button was harder.
 		</p>
 		<p>
 			At first, I tried to make it so that each time the page is loaded, a new hyperlink is set up. I tried to use time as an element of randomness, however since this is a static site, it would work only when the server loaded the page (as opposed to you, the client). I looked around and I found <a href="https://derekkedziora.com/blog/Getting-Random-Post-in-Jekyll">this page</a>. Also, I tried to figure out how <a href="https://xkcd.com">xkcd's</a> random button works.
 		</p>
 		<p>
-			So, the idea is that make the hyperlink titled "Random" go to a specific site, and once there, redirect the user again. Going to <a href="/random.html">this page</a> first determines the page from which you were redirected. It then asks Jekyll what posts are on this website, makes a list. There is some string manipulation involved so that I can compare urls easily, but put simply, it looks at the list of available posts, removes the one from which you were sent to the `random.html` page and then chooses one url randomly. Liquid itself doesn't have a random number generator, so I had to use JavaScript. Fortunately, one can pass Liquid variables into JavaScript (but one cannot go the other way because Liquid templates are processed first, and JavaScript is processed at the user's end). And, JavaScript does have a random number generator. So, it chooses a random url and redirects the page.
+			So, the idea is that make the hyperlink titled "Random" go to a specific site, and once there, redirect the user again. Going to <a href="/random.html">this page</a> first determines the page from which you were redirected. It then asks Jekyll what posts are on this website, makes a list. There is some string manipulation involved so that I can compare urls easily, but put simply, it looks at the list of available posts, removes the one from which you were sent to the <pre>random.html</pre> page and then chooses one url randomly. Liquid itself doesn't have a random number generator, so I had to use JavaScript. Fortunately, one can pass Liquid variables into JavaScript (but one cannot go the other way because Liquid templates are processed first, and JavaScript is processed at the user's end). And, JavaScript does have a random number generator. So, it chooses a random url and redirects the page.
 		</p>
 	</body>
 </html>
