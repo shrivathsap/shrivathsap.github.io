@@ -17,7 +17,8 @@ function change_theme(){
 }
 
 function apply_theme(){
-	if(localStorage['svok33-github-theme'] == 'dark'){
+	//since default is dark theme
+	if(localStorage['svok33-github-theme'] == 'light'){
 		document.getElementsByTagName('body')[0].classList.remove('light-theme');
 		document.getElementsByTagName('body')[0].classList.add('dark-theme');
 
