@@ -24,12 +24,23 @@ function apply_theme(){
 
 		//set background colour for triggered hamburger menu
 		//there is only one such div whose background colour needs to be changed
-		document.getElementsByClassName('trigger')[0].style.backgroundColor = background_color_light;
+		try{
+			document.getElementsByClassName('trigger')[0].style.backgroundColor = background_color_light;
+		}
+		catch{
+			;
+		}
+
 	}
 	else{
 		document.getElementsByTagName('body')[0].classList.remove('light-theme');
 		document.getElementsByTagName('body')[0].classList.add('dark-theme');
 
-		document.getElementsByClassName('trigger')[0].style.backgroundColor = background_color;
+		try{
+			document.getElementsByClassName('trigger')[0].style.backgroundColor = background_color;
+		}
+		catch{
+			;
+		}
 	}
 }
