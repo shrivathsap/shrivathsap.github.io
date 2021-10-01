@@ -39,7 +39,7 @@ for(i=0; i<galleries.length; i++){
 			document.getElementsByTagName('body')[0].style.margin = 0;
 			placeholder = lightbox.getElementsByTagName('img')[0];
 			placeholder.src = image.src;
-			placeholder.alt = image.alt;
+			placeholder.title = image.title;
 			lightbox.classList.add('active');
 		})
 	})
@@ -62,7 +62,7 @@ document.addEventListener('keydown',e=>{
 function load_next(){
 	current = lightbox.getElementsByTagName('img')[0]
 	for(i=0; i<images.length; i++){
-		if (images[i].alt==current.alt){
+		if (images[i].title==current.title){
 			if (i<(images.length-1)) {
 				images[i+1].click();//thanks to something called bubbling, this triggers a click event on the parent
 			}
@@ -75,7 +75,7 @@ function load_next(){
 function load_previous(){
 	current = lightbox.getElementsByTagName('img')[0]
 	for(i=0; i<images.length; i++){
-		if (images[i].alt==current.alt){
+		if (images[i].title==current.title){
 			if (i>=1) images[i-1].click();
 			else images[images.length-1].click();//modular arithmetic is broken? -1 gives -1
 			break;
