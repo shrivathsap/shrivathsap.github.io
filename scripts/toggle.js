@@ -19,17 +19,17 @@ function change_theme(){
 function apply_theme(){
 	//since default is dark theme
 	if(localStorage['svok33-github-theme'] == 'light'){
-		document.getElementsByTagName('body')[0].classList.remove('light-theme');
-		document.getElementsByTagName('body')[0].classList.add('dark-theme');
-
-		//set background colour for triggered hamburger menu
-		//there is only one such div whose background colour needs to be changed
-		document.getElementsByClassName('trigger')[0].style.backgroundColor = background_color;
-	}
-	else{
 		document.getElementsByTagName('body')[0].classList.remove('dark-theme');
 		document.getElementsByTagName('body')[0].classList.add('light-theme');
 
+		//set background colour for triggered hamburger menu
+		//there is only one such div whose background colour needs to be changed
 		document.getElementsByClassName('trigger')[0].style.backgroundColor = background_color_light;
+	}
+	else{
+		document.getElementsByTagName('body')[0].classList.remove('light-theme');
+		document.getElementsByTagName('body')[0].classList.add('dark-theme');
+
+		document.getElementsByClassName('trigger')[0].style.backgroundColor = background_color;
 	}
 }
