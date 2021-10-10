@@ -10,7 +10,7 @@ categories: tech
 		<title>Adding themes</title>
 	</head>
 	<body>
-		<p>Iniitally I modified the Jekyll minima theme so that this site will have a dark theme. However, I thought it would be nice to add a toggle button so that if someone wants a lighter theme, they can choose it.<!--more--></p>
+		<p>Initally I modified the Jekyll minima theme so that this site will have a dark theme. However, I thought it would be nice to add a toggle button so that if someone wants a lighter theme, they can choose it.<!--more--></p>
 		<p>So, how does one go about doing that? It took me a day to figure it out. So, there are these CSS files (and related SASS files) that tell your browser how the page should look. To change the colour of some element, all I need to do is to modify appropriate fields in these files.</p>
 		<p>Next, I need to add a button of some sort to actually change the themes. This is handled by a JavaScript script. So, when you click the theme at the footer of this or any other page on this website, it calls a function. Now, the overall body of a page is marked to have dark-theme by default. The function so called toggles this marking.</p>
 		<p>Now, web browsers are clever. So they look at the body of the page and see that it is marked to have dark-theme say, and then they look at the css files to see if there are colour modifiers involved. In the css files, the browsers understand that the body should have such and such background colours and text colours.</p>

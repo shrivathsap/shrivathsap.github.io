@@ -38,6 +38,10 @@ body {
   flex-direction: column;
 }
 
+//change font family of site title and page links etc
+.site-title, .page-link, .post-link, .post-title{
+	font-family: 'Fira Sans', sans-serif;
+}
 
 
 /**
