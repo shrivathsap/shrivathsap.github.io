@@ -17,15 +17,15 @@ function change_theme(){
 }
 
 function apply_theme(){
-	//since default is dark theme
-	if(localStorage['svok33-github-theme'] == 'light'){
-		document.getElementsByTagName('body')[0].classList.remove('dark-theme');
-		document.getElementsByTagName('body')[0].classList.add('light-theme');
+	//since default is light theme
+	if(localStorage['svok33-github-theme'] == 'dark'){
+		document.getElementsByTagName('body')[0].classList.remove('light-theme');
+		document.getElementsByTagName('body')[0].classList.add('dark-theme');
 
 		//set background colour for triggered hamburger menu
 		//there is only one such div whose background colour needs to be changed
 		try{
-			document.getElementsByClassName('trigger')[0].style.backgroundColor = background_color_light;
+			document.getElementsByClassName('trigger')[0].style.backgroundColor = background_color;
 		}
 		catch{
 			;
@@ -33,11 +33,11 @@ function apply_theme(){
 
 	}
 	else{
-		document.getElementsByTagName('body')[0].classList.remove('light-theme');
-		document.getElementsByTagName('body')[0].classList.add('dark-theme');
+		document.getElementsByTagName('body')[0].classList.remove('dark-theme');
+		document.getElementsByTagName('body')[0].classList.add('light-theme');
 
 		try{
-			document.getElementsByClassName('trigger')[0].style.backgroundColor = background_color;
+			document.getElementsByClassName('trigger')[0].style.backgroundColor = background_color_light;
 		}
 		catch{
 			;

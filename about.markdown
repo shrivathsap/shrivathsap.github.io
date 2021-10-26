@@ -6,6 +6,6 @@ permalink: /about/
 <title> About </title>
 Welcome to my website!
 
-I am Shrivathsa Pandelu, currently an MMath second year student at ISI Kolkata. In the mathematical sphere, I am mostly interested in the corner occupied by Geometry and Topology, however other corners are interesting too. It feels really weird to talk about oneself in this manner. Here's my [CV](./cv.html).
+I am Shrivathsa Pandelu, currently an MMath second year student at ISI Kolkata. Before that I got my Bmath degree from ISI Bangalore. As far as interests go, I am interested in algebraic topology, algebraic geometry, differential topology, algebraic number theory, cryptography, physics, reading etc. Here's my [CV](./cv.html).
 
-This site is hosted by GitHub, and was created using Jekyll. It currently uses (a modified) Jekyll Minima theme.
+This site is hosted by GitHub, and was created using Jekyll. It currently uses a modified Jekyll Minima theme. The purpose of this site is to host some of the things I have written and perhaps the occasional maths related post or something like that.
