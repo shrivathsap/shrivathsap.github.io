@@ -1,3 +1,5 @@
+//heavily inspired by Chris Courses channel on YouTube: canvas HTML5 tutorials
+
 canvas = document.getElementById('canvas');
 parent_div = document.getElementById('my-modified-misc-container')
 canvas.height = parent_div.clientHeight;
