@@ -81,6 +81,8 @@
     input ~ .trigger {
       clear: both;
       display: none;
+	  z-index: 3;//bring it to the top, position relative/absolute needs to be set
+	  position: relative;
     }
 
     input:checked ~ .trigger {
