@@ -1,5 +1,5 @@
 var text_color =       "#bbbbbb";
-var background_color = "#180018";
+var background_color = "#332233";
 var text_color_light = "#111";
 var background_color_light = "#dadada";
 
