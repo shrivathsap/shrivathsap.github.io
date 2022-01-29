@@ -1,0 +1,153 @@
+---
+layout: post
+title:  "Big List"
+categories: comics
+---
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Big List of Comics</title>
+	</head>
+	<body>
+		A big list of favourite comic strips (no longer maintained):
+		<!--more-->
+		<p>It goes without saying that I own none of these, all images are taken from the sites mentioned in the previous posts - well, technically those sites use some other servers to store the images and I've just borrowed that link. If they change servers or something then this post will break. Cheers!
+		</p>
+		<div class="comic_container">
+
+		</div>
+
+		<table style="margin:auto;table-layout: fixed; border:0px; font-size:20px;">
+			<tr>
+				<td style="text-align: left; border: none;padding: 0;">
+					<input type="button" name="" value="Previous" onclick="change_count(-1)">
+				</td>
+				<td style="text-align: right; border: none;padding: 0;">
+					<input type="button" name="" value="Next" onclick="change_count(1)">
+				</td>
+			</tr>
+		</table>
+	</body>
+
+	<script type="text/javascript">
+		big_list = ["https://assets.amuniversal.com/4585e2305a9b01379c16005056a9545d",
+				"https://assets.amuniversal.com/e340e4b0b0900137ba42005056a9545d",
+				"https://assets.amuniversal.com/7cebbf60bace0137be1e005056a9545d",
+				"https://assets.amuniversal.com/a33542f0e6e30137ce40005056a9545d",
+				"https://assets.amuniversal.com/9e878590c1940137c0ce005056a9545d",
+				"https://assets.amuniversal.com/b4060530d7960137c8c7005056a9545d",
+				"https://assets.amuniversal.com/c4edba40ec4a0137d02b005056a9545d",
+				"https://safr.kingfeatures.com/api/img.php?e=png&s=c&file=VGlnZXIvMjAxOS8xMS9UaWdlci4yMDE5MTEyOF8xNTM2LnBuZw==",
+				"https://assets.amuniversal.com/564afc50d8600137c932005056a9545d",
+				"https://assets.amuniversal.com/3bb1f16002560138d79f005056a9545d",
+				"https://assets.amuniversal.com/aaf81ba0d1d60137c6b5005056a9545d",
+				"https://assets.amuniversal.com/be432260d1d60137c6b5005056a9545d",
+				"https://assets.amuniversal.com/2423dc40d92d0137c98f005056a9545d",
+				"https://assets.amuniversal.com/a623a510e7e10137cead005056a9545d",
+				"https://safr.kingfeatures.com/api/img.php?e=png&s=c&file=VGlnZXIvMjAyMC8wMS9UaWdlci4yMDIwMDEwMV8xNTM2LnBuZw==",
+				"https://assets.amuniversal.com/b6877e100e100138db96005056a9545d",
+				"https://assets.amuniversal.com/cad63e9003d40138d83c005056a9545d",
+				"https://assets.amuniversal.com/6f5d10c009ac0138da33005056a9545d",
+				"https://assets.amuniversal.com/19f40bc0184b0138deea005056a9545d",
+				"https://assets.amuniversal.com/d1ac445009250138da24005056a9545d",
+				"https://assets.amuniversal.com/fb6d193029dc0138e551005056a9545d",
+				"https://assets.amuniversal.com/a87b07c0558f0138f506005056a9545d",
+				"https://assets.amuniversal.com/cd67d4804acc0138f109005056a9545d",
+				"https://assets.amuniversal.com/d9b150504acc0138f109005056a9545d",
+				"https://assets.amuniversal.com/0c469aa0409e0138ed88005056a9545d",
+				"https://safr.kingfeatures.com/api/img.php?e=png&s=c&file=TW9vc2VBbmRNb2xseS8yMDIwLzA0L01vb3NlLjIwMjAwNDE4XzE1MzYuZ2lm",
+				"https://assets.amuniversal.com/ee891d204acc0138f109005056a9545d",
+				"https://assets.amuniversal.com/5ae5095052220138f407005056a9545d",
+				"https://assets.amuniversal.com/871f49c073ec0138000f005056a9545d",
+				"https://assets.amuniversal.com/8cc4b78073ec0138000f005056a9545d",
+				"https://assets.amuniversal.com/0b7e544097cf01380c87005056a9545d",
+				"https://safr.kingfeatures.com/api/img.php?e=png&s=c&file=VGlnZXIvMjAyMC8wOC9UaWdlci4yMDIwMDgwNF8xNTM2LnBuZw==",
+				"https://assets.amuniversal.com/8498c670ba62013818b6005056a9545d",
+				"https://assets.amuniversal.com/8db9d2e0ba62013818b6005056a9545d",
+				"https://assets.amuniversal.com/92d62420ba62013818b6005056a9545d",
+				"https://assets.amuniversal.com/cf9bfcb00b3601393442005056a9545d",
+				"https://assets.amuniversal.com/eb34d3a0c125012fdd6d001dd8b71c47",
+				"https://assets.amuniversal.com/4568f280a83301381223005056a9545d",
+				"https://assets.amuniversal.com/ac05a2e047500137950d005056a9545d",
+				"https://assets.amuniversal.com/24f77a30477c0137951e005056a9545d",
+				"https://assets.amuniversal.com/4b78589078c70137a69a005056a9545d",
+				"https://assets.amuniversal.com/e3049eb0848d0137aa8d005056a9545d",
+				"https://assets.amuniversal.com/ebd93290590801379b5b005056a9545d",
+				"https://assets.amuniversal.com/f1d86f707f0d0137a8df005056a9545d",
+				"https://assets.amuniversal.com/f8487780590801379b5b005056a9545d",
+				"https://assets.amuniversal.com/2d4de7407a540137a731005056a9545d",
+				"https://assets.amuniversal.com/4d93cc505a9b01379c16005056a9545d",
+				"https://assets.amuniversal.com/d171cd808a0f0137acae005056a9545d",
+				"https://assets.amuniversal.com/0f972180590901379b5b005056a9545d",
+				"https://assets.amuniversal.com/cf3ec1d08a0f0137acae005056a9545d",
+				"https://safr.kingfeatures.com/api/img.php?e=png&s=c&file=QmVldGxlQmFpbGV5LzIwMTkvMDgvQmVldGxlX0JhaWxleS4yMDE5MDgyOF8xNTM2LnBuZw==",
+				"https://assets.amuniversal.com/cf35619095df0137b127005056a9545d",
+				"https://assets.amuniversal.com/5c5b07909f440137b461005056a9545d",
+				"https://assets.amuniversal.com/ad29f3c0a64c0137b700005056a9545d",
+				"https://safr.kingfeatures.com/api/img.php?e=png&s=c&file=TWFydmluLzIwMTkvMDkvTWFydmluLjIwMTkwOTIxXzE1MzYucG5n",
+				"https://safr.kingfeatures.com/api/img.php?e=png&s=c&file=VGlnZXIvMjAxOS8wOS9UaWdlci4yMDE5MDkyN18xNTM2LnBuZw==",
+				"https://safr.kingfeatures.com/api/img.php?e=png&s=c&file=VGlnZXIvMjAxOS8xMC9UaWdlci4yMDE5MTAwMl8xNTM2LnBuZw==",
+				"https://safr.kingfeatures.com/api/img.php?e=png&s=c&file=VGlnZXIvMjAxOS8xMC9UaWdlci4yMDE5MTAwM18xNTM2LnBuZw==",
+				"https://assets.amuniversal.com/4d036c70ab050137b87e005056a9545d",
+				"https://assets.amuniversal.com/34df4760c0460137c01a005056a9545d",
+				"https://safr.kingfeatures.com/api/img.php?e=png&s=c&file=QmxvbmRpZS8yMDE5LzEwL0Jsb25kaWUuMjAxOTEwMDlfMTUzNi5wbmc=",
+				"https://assets.amuniversal.com/6b85e140c5d70137c239005056a9545d",
+				"https://safr.kingfeatures.com/api/img.php?e=png&s=c&file=VGlnZXIvMjAxOS8xMC9UaWdlci4yMDE5MTAwOF8xNTM2LnBuZw==",
+				"https://assets.amuniversal.com/c28d9c109ca80137b3bd005056a9545d",
+				"https://safr.kingfeatures.com/api/img.php?e=png&s=c&file=QmVldGxlQmFpbGV5LzIwMTkvMTAvQmVldGxlX0JhaWxleV9ocy4yMDE5MTAxM18xNTM2LnBuZw==",
+				"https://assets.amuniversal.com/1028f910c3610137c1a6005056a9545d",
+				"https://assets.amuniversal.com/e40f5d60ab920137b8bd005056a9545d",
+				"https://assets.amuniversal.com/3a67bbe0c6920137c28f005056a9545d",
+				"https://assets.amuniversal.com/ca6cc1809ca80137b3bd005056a9545d",
+				"https://safr.kingfeatures.com/api/img.php?e=png&s=c&file=VGlnZXIvMjAxOS8xMC9UaWdlci4yMDE5MTAyNl8xNTM2LnBuZw==",
+				"https://assets.amuniversal.com/ce77e3b09ca80137b3bd005056a9545d",
+				"https://assets.amuniversal.com/52b43230bb0b0137be3e005056a9545d",
+				"https://assets.amuniversal.com/84660520c0cb0137c05c005056a9545d",
+				"https://assets.amuniversal.com/686364d0d7060137c880005056a9545d",
+				"https://assets.amuniversal.com/67082be0d1d60137c6b5005056a9545d"]
+		n = big_list.length;
+		comic_container = document.getElementsByClassName('comic_container')[0];
+		count = 0;
+		per_page = 7;
+		function display(start_index){
+			console.log(n, count, "hello");
+			for(i=0; i<Math.min(per_page, n-start_index); i++){
+				image = document.createElement('img');
+				image['src'] = big_list[start_index+i];
+				linebreak = document.createElement("br")
+				comic_container.appendChild(image);
+				comic_container.appendChild(linebreak);
+			}
+		}
+		function change_count(direction){
+			if(direction==-1){
+				if(count != 0){count -= per_page;}
+				else{count = n-n%per_page;}
+			}
+			else{
+				if(count < n-per_page){count+=per_page;}
+				else{count = 0;}
+			}
+			// clear contents and then add
+			comic_container.innerHTML = '';
+			display(count);
+		}
+		display(0);
+	</script>
+	<style media="screen">
+		.wrapper {
+			max-width: 900px;
+			margin-right: auto;
+			margin-left: auto;
+			padding-right: 20px;
+			padding-left: 20px;
+			align:center;
+		}
+		img {
+			max-width: 100%;
+			vertical-align: middle;
+			padding: 5px;
+		}
+	</style>
+</html>
