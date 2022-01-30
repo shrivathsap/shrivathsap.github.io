@@ -23,6 +23,7 @@ categories: comics
 				<td style="text-align: left; border: none;padding: 0;">
 					<input type="button" name="" value="Previous" onclick="change_count(-1)">
 				</td>
+				<td id="comic-count"></td>
 				<td style="text-align: right; border: none;padding: 0;">
 					<input type="button" name="" value="Next" onclick="change_count(1)">
 				</td>
@@ -115,10 +116,9 @@ categories: comics
 			for(i=0; i<Math.min(per_page, n-start_index); i++){
 				image = document.createElement('img');
 				image['src'] = big_list[start_index+i];
-				linebreak = document.createElement("br")
 				comic_container.appendChild(image);
-				comic_container.appendChild(linebreak);
 			}
+			document.getElementById('comic-count').innerText = start_index+1+'-'+Math.min(start_index+per_page, n);
 		}
 		function change_count(direction){
 			if(direction==-1){
@@ -147,7 +147,7 @@ categories: comics
 		img {
 			max-width: 100%;
 			vertical-align: middle;
-			padding: 5px;
+			padding: 7px;
 		}
 	</style>
 </html>
