@@ -32,7 +32,7 @@ title: About
 
 		function days_between(date1, date2){
 			const one_day = 1000*60*60*24;
-			return Math.ceil(Math.abs(date2-date1)/one_day);
+			return Math.abs(date2-date1)/one_day;
 		}
 
 		var c = canvas.getContext('2d');//context
