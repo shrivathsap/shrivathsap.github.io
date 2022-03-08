@@ -26,6 +26,11 @@ function apply_theme(){
 		//there is only one such div whose background colour needs to be changed
 		try{
 			document.getElementsByClassName('trigger')[0].style.backgroundColor = background_color_light;
+			//somehow with an updated version of the bundle, the header colour doesn't change properly, so change it manually
+			links = document.getElementsByClassName('site-header')[0].getElementsByTagName('a');
+			for(var l in links){
+				links[l].style.color = text_color_light;
+			}
 		}
 		catch{
 			;
@@ -38,6 +43,10 @@ function apply_theme(){
 
 		try{
 			document.getElementsByClassName('trigger')[0].style.backgroundColor = background_color;
+			links = document.getElementsByClassName('site-header')[0].getElementsByTagName('a');
+			for(var l in links){
+				links[l].style.color = text_color;
+			}
 		}
 		catch{
 			;
