@@ -42,7 +42,10 @@ layout: page
 		end = new Date(2022, 5, 8);
 		today = new Date();
 		//today.setHours(0, 0, 0);
-		percentage = 1-(days_between(today, end)/days_between(start, end));
+		percentage = 1;
+		if (days_between(today, end)>=0){
+			percentage = 1-(days_between(today, end)/days_between(start, end));
+		}
 		c.fillStyle = "green";
 		c.fillRect(0, 0, canvas.width*percentage, canvas.height);
 	</script>
