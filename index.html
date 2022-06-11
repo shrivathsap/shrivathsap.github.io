@@ -12,41 +12,15 @@ layout: page
 
 		<p>Welcome to my website!</p>
 
-		<p>I am Shrivathsa Pandelu, currently an MMath second year student at ISI Kolkata. Before that I got my BMath degree from ISI Bangalore. Here's my <a href="/cv.html">CV</a>.</p>
+		<p>I am Shrivathsa Pandelu, I completed my MMath at ISI Kolkata. Before that I completed my BMath from ISI Bangalore. Here's my <a href="/cv.html">CV</a>. I will be joining University of Minnesota, Twin Cities for my PhD.</p>
 
-		<h3> Now </h3>
+		<!-- <h3> Now </h3>
+		Out of office. -->
 
-		<p>Final semester of MMath, taking the following courses: Advanced Number Theory, Algebraic Topology, Elliptic Curves, Commutative Algebra, Algebraic Geometry. Semester ends on 8th June.</p>
-		<div id="progress-bar" style="width:100%;">
-			<canvas id="canvas" title="I'm excited not because there's a paradise ahead, but because I'm leaving a hell behind."></canvas>
-		</div>
 
 		<h3>About this site</h3>
 		<p>This site is a pet project. It is hosted by GitHub, and was created using Jekyll. It currently uses a modified Jekyll Minima theme. The purpose of this site is to host some of the things I have written and perhaps the occasional maths related post or something like that. Please enable JavaScript, and update your browser regularly.</p>
 		<p>Photos without source mentioned are taken from Unsplash.</p>
 	</body>
-	<script type="text/javascript">
-		canvas = document.getElementById('canvas')
-		canvas.height = 25;
-		canvas.width = document.getElementById('progress-bar').clientWidth;
 
-		function days_between(date1, date2){
-			const one_day = 1000*60*60*24;
-			return (date2-date1)/one_day;
-		}
-
-		var c = canvas.getContext('2d');//context
-		c.fillStyle = "grey";
-		c.fillRect(0, 0, canvas.width, canvas.height);
-		start = new Date(2022, 1, 7);
-		end = new Date(2022, 5, 8);
-		today = new Date();
-		//today.setHours(0, 0, 0);
-		percentage = 1;
-		if (days_between(today, end)>=0){
-			percentage = 1-(days_between(today, end)/days_between(start, end));
-		}
-		c.fillStyle = "green";
-		c.fillRect(0, 0, canvas.width*percentage, canvas.height);
-	</script>
 </html>

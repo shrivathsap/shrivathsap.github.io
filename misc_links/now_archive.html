@@ -9,13 +9,50 @@ layout: page
 	</head>
 	<body>
 		<!-- just because -->
-		<div class="now-container">
+		<!-- <div class="now-container">
 			<p>29 January 2022 - 21 February 2022</p>
 			<p></p>
-		</div>
+		</div> -->
 		<div class="now-container">
 			<p>27 September 2021 - 29 January 2022</p>
 			<p>I am taking the following courses at ISI, Kolkata: Fourier Analysis, Number Theory, Differential Topology and Commutative Algebra. I am also doing a project under <a href="https://www.isical.ac.in/~mahuya/">Prof. Mahuya Dutta</a> related to Morse Theory. Also looking at Algebraic Topology and Riemannian Geometry.</p>
 		</div>
+		<div class="now-container">
+			<p>7 February 2022 - 11 June 2022</p>
+			<p>Final semester of MMath, taking the following courses: Advanced Number Theory, Algebraic Topology, Elliptic Curves, Commutative Algebra, Algebraic Geometry. Semester ends on 8th June.</p>
+			<div id="progress-bar" style="width:100%;">
+				<canvas id="canvas" title="I'm excited not because there's a paradise ahead, but because I'm leaving a hell behind."></canvas>
+			</div>
+			<script type="text/javascript">
+				canvas = document.getElementById('canvas')
+				canvas.height = 25;
+				canvas.width = document.getElementById('progress-bar').clientWidth;
+
+				function days_between(date1, date2){
+					const one_day = 1000*60*60*24;
+					return (date2-date1)/one_day;
+				}
+
+				var c = canvas.getContext('2d');//context
+				c.fillStyle = "grey";
+				c.fillRect(0, 0, canvas.width, canvas.height);
+				start = new Date(2022, 1, 7);
+				end = new Date(2022, 5, 8);
+				today = new Date();
+				//today.setHours(0, 0, 0);
+				percentage = 1;
+				if (days_between(today, end)>=0){
+					percentage = 1-(days_between(today, end)/days_between(start, end));
+				}
+				c.fillStyle = "green";
+				c.fillRect(0, 0, canvas.width*percentage, canvas.height);
+			</script>
+		</div>
+		<!-- <div class="now-container">
+			<p>11 June 2022 - </p>
+			<p></p>
+		</div> -->
+
+
 	</body>
 </html>
