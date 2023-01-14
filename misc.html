@@ -7,34 +7,36 @@ title: Miscellaneous
 	<head>
 		<meta charset="utf-8">
 		<title>Miscellaneous</title>
+		<style media="screen">
+			.grid-container {
+				display: grid;
+				grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+				grid-row-gap: 20px;
+				grid-column-gap: 10px;
+				justify-content: center;
+				align-content: center;
+			}
+
+			.grid-item {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				height: 200px;
+				font-size: clamp(16px, 4vw, 22px);
+				font-family: papyrus;
+				font-weight: 900;
+				background-size: cover;
+				/* color: white; */
+				/* width: 300px */
+			}
+
+				.grid-item > a {
+					color: #fff;
+					text-shadow: 5px 5px 10px #000000;
+				}
+		</style>
 	</head>
-	<style media="screen">
-		.grid-container{
-			display: grid;
-			grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-			grid-row-gap: 20px;
-			grid-column-gap: 10px;
-			justify-content: center;
-			align-content: center;
-		}
-		.grid-item{
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-			height: 200px;
-			font-size: clamp(16px, 4vw, 22px);
-			font-family: papyrus;
-			font-weight: 900;
-			background-size: cover;
-			/* color: white; */
-			/* width: 300px */
-		}
-		.grid-item > a{
-			color: #fff;
-			text-shadow: 5px 5px 10px #000000;
-		}
-	</style>
 	<body>
 		<div class="grid-container">
 			<div class="grid-item" style="background-image: url('https://source.unsplash.com/random/?river,water,aerial')">
@@ -46,9 +48,10 @@ title: Miscellaneous
 			<!-- <div class="grid-item" style="background-image: url('https://source.unsplash.com/random/?autumn,woods,aerial')">
 				<a href="#" title="Blog">Blog</a>
 			</div> -->
-			<div class="grid-item" style="background-image: url('https://source.unsplash.com/random/?winter,mountains,aerial')">
+			<!--<div class="grid-item" style="background-image: url('https://source.unsplash.com/random/?winter,mountains,aerial')">
 				<a href="https://armadillo-comic-scraper.herokuapp.com/" title="Comics">Comics</a>
-			</div>
+			</div>-->
+			<!--It was nice while it lasted-->
 			<div class="grid-item" style="background-image: url('https://source.unsplash.com/random/?rainforest,aerial')">
 				<a href="misc_links/quotes.html" title="Quotes & Passages">Quotes & Passages</a>
 			</div>
