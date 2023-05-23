@@ -28,35 +28,8 @@ layout: page
 
 		<p>I am Shrivathsa Pandelu. Here's my <a href="/cv.html">CV</a>. I am a first year maths PhD student at the University of Minnesota, Twin Cities.</p>
 
-		<h3><a href="./misc_links/now_archive.html">Now</a></h3>
-		Spring semester 2023. Taking courses on Algebraic Geometry, Lie Groups and hopefully I will also be able to read a bunch of things on the side.
-		<div id="progress-bar" style="width:100%;">
-			<canvas id="canvas" title="Countdown to go home"></canvas>
-		</div>
-		<script type="text/javascript">
-				canvas = document.getElementById('canvas')
-				canvas.height = 25;
-				canvas.width = document.getElementById('progress-bar').clientWidth;
+		<!-- <h3><a href="./misc_links/now_archive.html">Now</a></h3> -->
 
-				function days_between(date1, date2) {
-					const one_day = 1000 * 60 * 60 * 24;
-					return (date2 - date1) / one_day;
-				}
-
-				var c = canvas.getContext('2d');//context
-				c.fillStyle = "grey";
-				c.fillRect(0, 0, canvas.width, canvas.height);
-				start = new Date(2023, 0, 14);
-				end = new Date(2023, 4, 15);
-				today = new Date();
-				//today.setHours(0, 0, 0);
-				percentage = 1;
-				if (days_between(today, end) >= 0) {
-					percentage = 1 - (days_between(today, end) / days_between(start, end));
-				}
-				c.fillStyle = "green";
-				c.fillRect(0, 0, canvas.width * percentage, canvas.height);
-		</script>
 
 		<h3><a href="./misc_links/potm_archive.html">Picture of the month</a></h3>
 
