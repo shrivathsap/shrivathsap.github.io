@@ -12,14 +12,11 @@ title: Some photos
 		<script defer src="./scripts/photos.js" charset="utf-8"></script>
 	</head>
 	<body>
-		<p>These are photos I took. An (R) indicates that the photos was taken on my mobile phone (Redmi 4), a (D) indicates
-		that it was taken on a Nikon 3500 DSLR camera, and (E) indicates that the photo was edited. At the present time
-		I do not know how to properly edit photos, so when I say edited, it refers to the options that my phone has : brightness,
-		sharpness and contrast; and these apply only to the photos taken on my phone. They have been cropped and compressed so as to reduce their file size.</p>
-		<div class="photo_header" onclick = "image_handler('insects')">
+		<p>These are photos I took. An (R) indicates that the photos was taken on my old mobile phone (Redmi 4), an (S) indicates my Samsung M32, a (D) indicates that it was taken on a Nikon 3500 DSLR camera, and (E) indicates that the photo was edited. At the present time I do not know how to properly edit photos, so when I say edited, it refers to the options that my phone has : brightness, sharpness and contrast; and these apply only to the photos taken on my phone. They have been cropped and compressed so as to reduce their file size.</p>
+		<div class="photo_header" onclick="image_handler('insects')">
 			<span>Insects</span>
 			<hr>
-			<div class="gallery" id = "insects">
+			<div class="gallery" id="insects">
 				<div class="content">
 					<img src="./resources/photos/insects/ant.jpg" alt="ant">
 					<p>A fire ant (D)</p>
@@ -134,10 +131,10 @@ title: Some photos
 				</div>
 			</div>
 		</div>
-		<div class="photo_header" onclick = "image_handler('animals')">
+		<div class="photo_header" onclick="image_handler('animals')">
 			<span>Animals</span>
 			<hr>
-			<div class="gallery" id = "animals">
+			<div class="gallery" id="animals">
 				<div class="content">
 					<img src="./resources/photos/animals/cat.jpg" alt="cat">
 					<p>Cat (D)</p>
@@ -200,7 +197,7 @@ title: Some photos
 				</div>
 			</div>
 		</div>
-		<div class="photo_header" onclick = "image_handler('birds')">
+		<div class="photo_header" onclick="image_handler('birds')">
 			<span>Birds</span>
 			<hr>
 			<div class="gallery" id="birds">
@@ -256,10 +253,26 @@ title: Some photos
 					<img src="./resources/photos/birds/peacock.jpg" alt="peacock">
 					<p>Peacock (D)</p>
 				</div>
+				<div class="content">
+					<img src="./resources/photos/birds/up_above.jpg" alt="up_above">
+					<p>Looking up (D)</p>
+				</div>
+				<div class="content">
+					<img src="./resources/photos/birds/meal_time.jpg" alt="meal_time">
+					<p>Meal Time (D)</p>
+				</div>
+				<div class="content">
+					<img src="./resources/photos/birds/smart.jpg" alt="smart">
+					<p>One smart bird (D)</p>
+				</div>
+				<div class="content">
+					<img src="./resources/photos/birds/synced.jpg" alt="synced">
+					<p>Turkeys in sync (D)</p>
+				</div>
 			</div>
 
 		</div>
-		<div class="photo_header" onclick = "image_handler('plants')">
+		<div class="photo_header" onclick="image_handler('plants')">
 			<span>~Plants</span>
 			<hr>
 			<div class="gallery" id="plants">
@@ -318,10 +331,10 @@ title: Some photos
 			</div>
 
 		</div>
-		<div class="photo_header" onclick = "image_handler('rwb')">
+		<div class="photo_header" onclick="image_handler('rwb')">
 			<span>Red Whiskered Bulbul</span>
 			<hr>
-			<div class="gallery" id = "rwb">
+			<div class="gallery" id="rwb">
 				<div class="content">
 					<img src="./resources/photos/rwb/rwb1.jpg" alt="rwb1">
 					<p>Three eggs, 2 hatched (R)</p>
@@ -360,10 +373,10 @@ title: Some photos
 				</div>
 			</div>
 		</div>
-		<div class="photo_header" onclick = "image_handler('distance')">
+		<div class="photo_header" onclick="image_handler('distance')">
 			<span>Distance</span>
 			<hr>
-			<div class="gallery" id = "distance">
+			<div class="gallery" id="distance">
 				<div class="content">
 					<img src="./resources/photos/distance/cloud1.jpg" alt="cloud1">
 					<p>Cloud 1 (R)</p>
@@ -412,13 +425,57 @@ title: Some photos
 					<img src="./resources/photos/distance/sunset.jpg" alt="sunset">
 					<p>Sunset (D)</p>
 				</div>
+			</div>
+		</div>
+
+		<div class="photo_header" onclick="image_handler('landscape')">
+			<span>Landscape</span>
+			<hr>
+			<div class="gallery" id="landscape">
+				<div class="content">
+					<img src="./resources/photos/landscape/dark_path.jpg" alt="dark_path">
+					<p>A dark path lies ahead (S)</p>
+				</div>
+				<div class="content">
+					<img src="./resources/photos/landscape/trodden.jpg" alt="trodden">
+					<p>A well-trodden path lies ahead (S)</p>
+				</div>
+				<div class="content">
+					<img src="./resources/photos/landscape/fall.jpg" alt="fall">
+					<p>Fall (S)</p>
+				</div>
+				<div class="content">
+					<img src="./resources/photos/landscape/bridge_mississippi.jpg" alt="bridge_mississippi">
+					<p>A bridge(S)</p>
+				</div>
+				<div class="content">
+					<img src="./resources/photos/landscape/fresh_snow.jpg" alt="fresh_snow">
+					<p>Fresh snow (S)</p>
+				</div>
+				<div class="content">
+					<img src="./resources/photos/landscape/miniature.jpg" alt="miniature">
+					<p>Miniature town below Barn Bluff (S)</p>
+				</div>
+				<div class="content">
+					<img src="./resources/photos/landscape/onion_peel.jpeg" alt="onion_peel">
+					<p>Onion peel finding purpose (S)</p>
+				</div>
+				<div class="content">
+					<img src="./resources/photos/landscape/navy_pier.jpg" alt="navy_pier">
+					<p>Navy Pier (S)</p>
+				</div>
+				<div class="content">
+					<img src="./resources/photos/landscape/mkd.jpg" alt="mkd">
+					<p>Makali Durga Hill (S, panorama)</p>
+				</div>
 
 			</div>
 		</div>
-		<div class="photo_header" onclick = "image_handler('others')">
+
+		<div class="photo_header" onclick="image_handler('others')">
 			<span>Others</span>
 			<hr>
-			<div class="gallery" id = "others">
+			<div class="gallery" id="others">
 				<div class="content">
 					<img src="./resources/photos/others/abandoned1.jpg" alt="abandoned1">
 					<p>Abandoned building (R)</p>
@@ -530,6 +587,14 @@ title: Some photos
 				<div class="content">
 					<img src="./resources/photos/others/tiny_door.jpg" alt="tiny_door">
 					<p>Tiny door or huge tree? (S)</p>
+				</div>
+				<div class="content">
+					<img src="./resources/photos/others/po.jpg" alt="po">
+					<p>Post (D)</p>
+				</div>
+				<div class="content">
+					<img src="./resources/photos/others/sunny_day.jpg" alt="sunny_day">
+					<p>Sunny day (S)</p>
 				</div>
 			</div>
 		</div>
