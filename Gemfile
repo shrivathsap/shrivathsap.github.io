@@ -7,7 +7,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 4.3.3"
+gem "jekyll", "~> 4.2"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 
 #removed gem based dependence
@@ -30,4 +30,4 @@ platforms :mingw, :x64_mingw, :mswin, :jruby do
 end
 
 # Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
+gem "wdm", "~> 0.2.0", :platforms => [:mingw, :x64_mingw, :mswin]
