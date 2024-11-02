@@ -1,3 +1,7 @@
+@use "minima" as *;//this is lazy, ideally everytime I refer to a colour etc I should use minima.@text-color-light, for example
+//but it's fine because I have one huge css file where everything is defined...
+@use "sass:color";
+
 /**
  * Reset some basic elements
  */

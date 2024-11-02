@@ -1,9 +1,10 @@
+//@use "minima" as *;
 /**
  * Syntax highlighting styles
  */
 .highlight {
   background: inherit;//#fff;
-  @extend %vertical-rhythm;
+  @extend %vertical-rhythm !optional;//!optional added later
 //not sure what highlighter-rouge is for
   .highlighter-rouge & {
     background: inherit;//#eef;
