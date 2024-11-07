@@ -2,7 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@forward "minima";//need to import them separately for some reason, else it breaks.
+//@forward "minima";//need to import them separately for some reason, else it breaks.
 @forward "minima/base";
 @forward "minima/layout";
 @forward "minima/syntax-highlighting";

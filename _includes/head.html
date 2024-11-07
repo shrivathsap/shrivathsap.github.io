@@ -4,7 +4,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/main.scss" | relative_url }}">{%- this breaks locally -%}
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">{%- this breaks live -%}
   <link rel="shortcut icon" type="image/png" href="favicon.png">
   <script src="/scripts/toggle.js" charset="utf-8"></script>
   {%- feed_meta -%}
