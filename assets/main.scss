@@ -4,6 +4,6 @@
 
 // @import "minima";
 // @forward "minima";//need to import them separately for some reason, else it breaks.
-@forward "minima/base";
-@forward "minima/layout";
-@forward "minima/syntax-highlighting";
+@forward "./minima/_base";
+@forward "./minima/_layout";
+@forward "./minima/_syntax-highlighting";
