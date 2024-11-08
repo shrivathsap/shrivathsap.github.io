@@ -1,5 +1,5 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+
 ---
 
 @use "minima";
@@ -7,6 +7,7 @@
 @use "minima/layout";
 @use "minima/syntax-highlighting";
 
+// @import "minima";
 // @import "minima/base";
 // @import "minima/layout";
 // @import "minima/syntax-highlighting";
