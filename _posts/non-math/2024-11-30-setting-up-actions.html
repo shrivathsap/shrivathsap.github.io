@@ -1,0 +1,46 @@
+---
+layout: post
+title:  "Actions"
+categories: tech
+excerpt_separator: <!--more-->
+---
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Actions</title>
+	</head>
+	<body>
+        <p>It has been more than 2 years since I last created a blog post on this website. I want to keep this space for updates about the site and not so much about my life and there has been a somewhat significant update to the website.<!--more--></p>
+
+        <p>This website, as every other website on the internet has three major building blocks on the user end - HTML, CSS and Javascript - and the update in question is with CSS. HTML dictates the basic structure of the website, saying what should be a heading, what should be a paragraph, what should be in <b>bold</b>, <i>italics</i> and so on. Javascript handles some nifty things with how the user interacts with the webpage, for example have a look at the bubbles on my <a href="../misc.html">Miscellaneous</a> page. And CSS controls how the page looks - the colours, fonts, margins etc. HTML can handle those, but it's annoying to handle it via HTML. There is more to it, but this is how I understand it.</p>
+
+        <p>Now, this website is built using Jekyll and Ruby. The CSS is handled by something called Sass.This website is hosted on Github-pages and Github-pages uses an old version of Jekyll. But Sass updated a few things which would lead to problems down the road and break the site if I didn't address it soon.</p>
+
+        <p>This website uses something called the "minima" theme and this comes with a bunch of CSS files with predefined properties. For the most part I haven't changed anything, except for adding a <a href="./adding-themes.html">dark-light mode option</a>. Now, when I make my own CSS files for the larger website, I need to import the predefined CSS files that came with the minima theme. This used to be done with the function <code>@import</code>, which is very straightforward...</p>
+
+        <p>...but not really. You see, <code>@import</code> had issues and the people who maintain Sass (this also has some story behind it; there used to be three or more different versions of Sass, but now there's only one or something like that, and so the people who used the other versions have to migrate to the current "standard" version and Jekyll used one of the other versions) figured out a fix and that was to introduce <code>@use</code> and <code>@forward</code> commands.</p>
+
+        <p>I was not following these developments, but sometime this year my console started throwing warnings about <code>@import</code> being deprecated in the future. After following a couple of YouTube videos and reading the <a href="https://sass-lang.com/blog/import-is-deprecated/">documentations</a>, I figured out how to migrate from the old functions to the new ones. For the most part I simply had to replace <code>@import</code> with <code>@use</code>.</p>
+
+        <p>For those who know a little more about programming, the <code>@use</code> command makes the imported CSS file behave like an object, so every time I needed to use a property from within that file, I had to reference that object - which in particular meant that when I imported a file using <code>@use</code> I had to give it a name. For example, if I imported a <code>colours.css</code> file, then I had to import it using something like <code>@use colours.css as colours</code> and every time I wanted to refer to a definition in that file, I would write <code>colours.red</code>, for example.</p>
+
+        <p>But that would mean that in my old files, I would have to prepend all properties using the new names! Fortunately, there's a way to get away with not having to refer to the file by its name by importing the file with <code>@use colours.css as *</code>. This works for me because I only had one file that I needed to import - the one that came with the minima theme. Of course, in the future if I have to import more files, I would have to use these "name spaces" for the newly imported files or make sure that there are no conflicting definitions (for example, there shouldn't be two definitions of "radius" or "border-width" being imported from two different files - this also highlights why names are imported; with names you can say "page.border-width" and "table.border-width" to talk about two different border-width definitions stored in two different CSS files).</p>
+
+        <p>That was all fine and the migration to new functions worked perfectly on my device and I pushed the changes to Github. A couple days later, when I accessed the website from my phone, I noticed that the CSS was completely broken. Where could the problem be?</p>
+
+        <p>It took me a long time to figure out where the problem was, especially because the CSS loaded perfectly fine on my device (I hear this is a joke among programmers). After browsing through a dozen different Github, google pages, I figured out that the issue was with Github-pages itself. As I mentioned earlier, Github-pages uses an older version of Jekyll and this older version doesn't support the newer version of Sass!</p>
+
+        <p>At this stage, I had two options. Undo the changes and go back to the way things were and live with the warnings my system threw at me about <code>@import</code> being deprecated, or figure out a way to get around something entirely out of my control. Fortunately, there was a way to actually get around something out of my control (if only that were so in life!) and that was through something called Github-actions. Besides, I didn't want to undo all the effort it took to migrate to the new version of Sass.</p>
+
+        <p>When I use Github-pages, Github generates the webpage using it's software (the older version of Jekyll etc.) and that's what the user sees. One way around this is to compile the website locally and upload the end result to Github and let Github-pages take it from there - but this is extra work on my end and if there's one job that software has, it is to reduce work!</p>
+        
+        <p>Another solution is to somehow force Github to instead use a different version of Jekyll and this is where Github-actions come in. Github-actions is a way to automate certain things like testing and deploying software and there is a way to set it up so that each time I upload some code, some action happens. The action in question is to generate a website from the code I upload. For this to work, I need to specify Github what software it needs.</p>
+
+        <p>To set up Github-actions, I simply had to follow the <a href="https://jekyllrb.com/docs/continuous-integration/github-actions/">documentation</a> and a few forum threads which I am unable to find now. There was a slight difficulty with ensuring the right platform. I use Windows and so all my files have a dependency on Windows, but Github uses Linux. I had to add a platform dependency on a certain <code>Gemfile.lock</code> file and install certain gems to make sure everything worked smoothly. I didn't know this and the order in which I made these changes and pushed them to Github wasn't quite right and it took me a dozen tries to figure out what was going wrong and how to fix it. But, it's a learning curve that's visible as a bunch of failed deployments somewhere on my Github repository.</p>
+
+        <p>Finally, I got Github-actions working and that's the end of the story. Now, my website uses the latest versions and I can upgrade things as I wish because Github-actions uses the software I tell it to use. All of this happened a couple weeks back and I'm sure I've forgotten a thing or two. But it was fun, I learnt some things about software and how people deal with different versions, upgrading, how Github-actions works and so on. That's the end of this post.</p>
+    </body>
+</html>
+    
