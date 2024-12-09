@@ -47,6 +47,7 @@ copyright: "ShrivathsaPandelu"
 
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 sass:
     sass_dir: _sass
